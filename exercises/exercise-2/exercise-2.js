@@ -70,3 +70,16 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+//## Task 1
+
+hogwarts.filter(({firstName, lastName, house}) => house.includes("Gryffindor"))
+.forEach(({firstName, lastName}) => console.log(`${firstName} ${lastName}`));
+
+// hogwarts.filter((person) => person.house.includes("Gryffindor"))
+// .forEach(({firstName, lastName}) => console.log(`${firstName} ${lastName}`));
+
+//## Task 2
+
+hogwarts.filter(({firstName, lastName, house, pet, occupation}) => pet !== null && occupation.includes("Teacher"))
+.forEach(({firstName, lastName}) => console.log(`${firstName} ${lastName}`));
